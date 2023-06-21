@@ -1,6 +1,6 @@
 import About from "@/components/About";
 import ContactMe from "@/components/ContactMe";
-import Experience from "@/components/Experience/Experience";
+import Experience from "@/components/Experience";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
