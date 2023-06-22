@@ -14,11 +14,12 @@ export const sassIcon = "/Icons/Technologies/Sass.png";
 export const ibsMobileIcon = "/Icons/Companies/IBSMobile.jpg";
 export const ibsLogo = "/Icons/Companies/IBS.png";
 
-export const ibsProjectImages = [
+export const ibsAppImages = [
   "/icons/Companies/IbsMobileAppImg1.png",
   "/icons/Companies/IbsMobileAppImg3.png",
   "/icons/Companies/IbsMobileAppImg2.png",
 ];
+export const ibsDashboardImages = ["/icons/Companies/IbsDashboard.png"];
 
 //Rescounts
 export const rescountsLogo = "/Icons/Companies/Rescounts.png";

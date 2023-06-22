@@ -1,12 +1,17 @@
 import {
-  ibsProjectImages,
+  ibsAppImages,
+  ibsDashboardImages,
   ibsMobileIcon,
   rescountsLogo,
   rescountsProjectImages,
 } from "@/utils";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React from "react";
+import React, { useState, useRef } from "react";
+import {
+  ArrowRightCircleIcon,
+  ArrowLeftCircleIcon,
+} from "@heroicons/react/24/solid";
 export default function Projects() {
   const projectList = [
     {
@@ -14,8 +19,16 @@ export default function Projects() {
       description:
         "Cross-platfrom mobile app for IBS's employees to track their salaries, insurance status, chat with customer support and more",
       logo: ibsMobileIcon,
-      images: ibsProjectImages,
+      images: ibsAppImages,
       link: "https://play.google.com/store/apps/details?id=com.ibs.mobile&hl=en&gl=US",
+    },
+    {
+      title: "IBS Dashboard",
+      description:
+        "An internal dashboard for managing IBS employees and all their data",
+      logo: ibsMobileIcon,
+      images: ibsDashboardImages,
+      // link: "https://play.google.com/store/apps/details?id=com.ibs.mobile&hl=en&gl=US",
     },
     {
       title: "Rescounts",
@@ -27,6 +40,36 @@ export default function Projects() {
     },
   ];
 
+  const [activeProjectIndex, setActiveProjectIndex] = useState(0);
+  const containerRef: any = useRef(null);
+
+  const scrollToNextProject = () => {
+    const nextIndex = (activeProjectIndex + 1) % projectList.length;
+    setActiveProjectIndex(nextIndex);
+
+    if (containerRef && containerRef.current) {
+      containerRef.current.children[nextIndex].scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "start",
+      });
+    }
+  };
+  const scrollToPreviousProject = () => {
+    const previousIndex =
+      activeProjectIndex - 1 < 0
+        ? projectList.length - 1
+        : activeProjectIndex - 1;
+    setActiveProjectIndex(previousIndex);
+
+    if (containerRef && containerRef.current) {
+      containerRef.current.children[previousIndex].scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "start",
+      });
+    }
+  };
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -37,7 +80,16 @@ export default function Projects() {
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+      <button
+        className="absolute left-20 top-1/2 transform z-50 hidden md:block"
+        onClick={scrollToPreviousProject}
+      >
+        <ArrowLeftCircleIcon className="text-[#141414] h-16 w-16 " />
+      </button>
+      <div
+        ref={containerRef}
+        className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80"
+      >
         {projectList.map((project, index) => (
           <div
             key={index}
@@ -53,7 +105,7 @@ export default function Projects() {
                   transition={{ duration: 1.2 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="rounded-xl w-50 h-40 md:w-24 md:h-44 lg:w-max lg:h-60 "
+                  className="rounded-xl w-50 h-40 md:w-24 md:h-44 lg:w-max lg:h-72 "
                   src={image}
                   alt=""
                   key={index}
@@ -87,6 +139,12 @@ export default function Projects() {
         ))}
       </div>
       <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12" />
+      <button
+        className="absolute right-20 top-1/2 transform -translate-y-1/2  z-50 hidden md:block"
+        onClick={scrollToNextProject}
+      >
+        <ArrowRightCircleIcon className="text-[#141414] h-16 w-16 " />
+      </button>
     </motion.div>
   );
 }

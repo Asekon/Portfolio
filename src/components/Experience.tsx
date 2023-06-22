@@ -19,6 +19,7 @@ const data = [
     position: "Frontend developer",
     name: "Rescounts",
     technologies: [
+      githubIcon,
       expoIcon,
       javascriptIcon,
       cssIcon,
