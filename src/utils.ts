@@ -8,10 +8,18 @@ export const expoIcon = "/Icons/Technologies/Expo.svg";
 export const reactIcon = "/Icons/Technologies/React.png";
 export const sassIcon = "/Icons/Technologies/Sass.png";
 
-//companies icons
+//companies
+
+//IBS
 export const ibsMobileIcon = "/Icons/Companies/IBSMobile.jpg";
 export const ibsLogo = "/Icons/Companies/IBS.png";
 
-export const IbsProjectImages = ["/icons/Companies/ibsProject.jpg"];
+export const ibsProjectImages = [
+  "/icons/Companies/IbsMobileAppImg1.png",
+  "/icons/Companies/IbsMobileAppImg3.png",
+  "/icons/Companies/IbsMobileAppImg2.png",
+];
 
+//Rescounts
 export const rescountsLogo = "/Icons/Companies/Rescounts.png";
+export const rescountsProjectImages = [" /Icons/Companies/RescountsAppImg.png"];

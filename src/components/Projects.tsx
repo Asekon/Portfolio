@@ -1,4 +1,9 @@
-import { IbsProjectImages, ibsMobileIcon } from "@/utils";
+import {
+  ibsProjectImages,
+  ibsMobileIcon,
+  rescountsLogo,
+  rescountsProjectImages,
+} from "@/utils";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
@@ -6,9 +11,17 @@ export default function Projects() {
   const projectList = [
     {
       title: "IBS Mobile",
-      description: "Cross-platfrom mobile app",
+      description:
+        "Cross-platfrom mobile app for IBS's employees to track their salaries, insurance status, chat with customer support and more",
       logo: ibsMobileIcon,
-      images: IbsProjectImages,
+      images: ibsProjectImages,
+    },
+    {
+      title: "Rescounts",
+      description:
+        "Cross-platfrom mobile app for food pre-ordering in restaurants",
+      logo: rescountsLogo,
+      images: rescountsProjectImages,
     },
   ];
 
@@ -22,7 +35,7 @@ export default function Projects() {
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         {projectList.map((project, index) => (
           <div
             key={index}
@@ -38,14 +51,14 @@ export default function Projects() {
                   transition={{ duration: 1.2 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  // className="rounded-full w-16 h-16 md:w-20 md:h-20 xl:w-28 xl:h-28"
+                  className="rounded-xl w-16 h-16 md:w-20 md:h-20 xl:w-max xl:h-64 sm:w-20 sm:h-20"
                   src={image}
                   alt=""
                   key={index}
                 />
               ))}
             </div>
-            <div className="space-y-3 px-0 md:px-10 max-w-6xl">
+            <div className="space-y-3 px-0 md:px-10 max-w-6xl flex flex-col items-center">
               <div className="flex items-center space-x-5">
                 <Image
                   src={project.logo}
