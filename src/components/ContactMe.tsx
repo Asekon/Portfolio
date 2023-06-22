@@ -28,7 +28,7 @@ export default function ContactMe() {
 
           <div className="flex items-center space-x-2 justify-center">
             <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl md:text-1xl sm:text-xl">+20 1111123353</p>
+            <p className="text-2xl md:text-1xl sm:text-xl">Cairo, Egypt</p>
           </div>
         </div>
 

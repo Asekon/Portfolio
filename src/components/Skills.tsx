@@ -47,7 +47,7 @@ export default function Skills() {
     {
       level: "100%",
       logo: reactIcon,
-      name: "React",
+      name: "React/Native",
       directionLeft: true,
     },
     {
@@ -75,9 +75,9 @@ export default function Skills() {
         Skills
       </h3>
       <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm">
-        hover over a skill for current proficiency
+        Proficient in the following technologies
       </h3>
-      <div className="grid grid-cols-4 gap-16">
+      <div className="grid grid-cols-4 gap-8 md:gap-16 mx-9">
         {SkillList.map((skill) => (
           <Skill
             key={skill.name}

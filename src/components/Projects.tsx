@@ -15,6 +15,7 @@ export default function Projects() {
         "Cross-platfrom mobile app for IBS's employees to track their salaries, insurance status, chat with customer support and more",
       logo: ibsMobileIcon,
       images: ibsProjectImages,
+      link: "https://play.google.com/store/apps/details?id=com.ibs.mobile&hl=en&gl=US",
     },
     {
       title: "Rescounts",
@@ -22,6 +23,7 @@ export default function Projects() {
         "Cross-platfrom mobile app for food pre-ordering in restaurants",
       logo: rescountsLogo,
       images: rescountsProjectImages,
+      link: "https://play.google.com/store/apps/details?id=com.rescounts.app&hl=en&gl=US",
     },
   ];
 
@@ -51,7 +53,7 @@ export default function Projects() {
                   transition={{ duration: 1.2 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="rounded-xl w-16 h-16 md:w-20 md:h-20 xl:w-max xl:h-64 sm:w-20 sm:h-20"
+                  className="rounded-xl w-50 h-40 md:w-24 md:h-44 lg:w-max lg:h-60 "
                   src={image}
                   alt=""
                   key={index}
@@ -59,7 +61,11 @@ export default function Projects() {
               ))}
             </div>
             <div className="space-y-3 px-0 md:px-10 max-w-6xl flex flex-col items-center">
-              <div className="flex items-center space-x-5">
+              <a
+                className="flex items-center space-x-5"
+                href={project.link}
+                target="_blank"
+              >
                 <Image
                   src={project.logo}
                   width={300}
@@ -67,13 +73,13 @@ export default function Projects() {
                   alt=""
                   className="rounded-full w-12 h-12 md:w-16 md:h-16 xl:w-23 xl:h-23"
                 />
-                <h4 className="text-4xl font-semibold text-center ">
+                <h4 className="text-2xl font-semibold text-center md:text-3xl">
                   <span className="underline decoration-[#F7AB0A]/50">
                     {project.title}
                   </span>
                 </h4>
-              </div>
-              <p className="text-lg text-center md:text-left">
+              </a>
+              <p className="text-xl text-center md:text-left">
                 {project.description}
               </p>
             </div>
