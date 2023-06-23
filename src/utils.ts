@@ -15,7 +15,7 @@ export const ibsMobileIcon = "/Icons/Companies/IBSMobile.jpg";
 export const ibsLogo = "/Icons/Companies/IBS.png";
 
 export const ibsAppImages = [
-  "/Icons/Companies/ibsmobileappimg1.png",
+  "/Icons/Companies/ibsmobileappimg1.jpg",
   "/Icons/Companies/ibsmobileappimg3.png",
   "/Icons/Companies/ibsmobileappimg2.png",
 ];
