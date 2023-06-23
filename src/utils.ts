@@ -16,10 +16,10 @@ export const ibsLogo = "/Icons/Companies/IBS.png";
 
 export const ibsAppImages = [
   "/Icons/Companies/ibsmobileappimg1.jpg",
-  "/Icons/Companies/ibsmobileappimg3.png",
-  "/Icons/Companies/ibsmobileappimg2.png",
+  "/Icons/Companies/ibsmobileappimg3.jpg",
+  "/Icons/Companies/ibsmobileappimg2.jpg",
 ];
-export const ibsDashboardImages = ["/Icons/Companies/ibsdashboard.png"];
+export const ibsDashboardImages = ["/Icons/Companies/ibsdashboard.jpg"];
 
 //Rescounts
 export const rescountsLogo = "/Icons/Companies/Rescounts.png";
