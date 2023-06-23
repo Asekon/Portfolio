@@ -18,6 +18,7 @@ export const ibsAppImages = [
   "/icons/Companies/ibsmobileappimg1.png",
   "/icons/Companies/ibsmobileappimg3.png",
   "/icons/Companies/ibsmobileappimg2.png",
+  "/icons/Companies/Untitled.png",
 ];
 export const ibsDashboardImages = ["/icons/Companies/ibsdashboard.png"];
 
