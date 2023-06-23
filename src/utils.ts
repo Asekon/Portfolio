@@ -15,12 +15,12 @@ export const ibsMobileIcon = "/Icons/Companies/IBSMobile.jpg";
 export const ibsLogo = "/Icons/Companies/IBS.png";
 
 export const ibsAppImages = [
-  "/icons/Companies/IbsMobileAppImg1.png",
-  "/icons/Companies/IbsMobileAppImg3.png",
-  "/icons/Companies/IbsMobileAppImg2.png",
+  "/icons/Companies/ibsmobileappimg1.png",
+  "/icons/Companies/ibsmobileappimg3.png",
+  "/icons/Companies/ibsmobileappimg2.png",
 ];
-export const ibsDashboardImages = ["/icons/Companies/IbsDashboard.png"];
+export const ibsDashboardImages = ["/icons/Companies/ibsdashboard.png"];
 
 //Rescounts
 export const rescountsLogo = "/Icons/Companies/Rescounts.png";
-export const rescountsProjectImages = [" /Icons/Companies/RescountsAppImg.png"];
+export const rescountsProjectImages = ["/Icons/Companies/RescountsAppImg.png"];
