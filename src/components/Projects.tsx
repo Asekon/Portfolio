@@ -131,7 +131,7 @@ export default function Projects() {
                   </span>
                 </h4>
               </a>
-              <p className="text-xl text-center md:text-left">
+              <p className="text-sm text-center md:text-left">
                 {project.description}
               </p>
             </div>

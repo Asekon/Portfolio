@@ -29,8 +29,12 @@ export default function Hero() {
           Software Engineer
         </h2>
         <h1 className="text-3xl lg:text-4xl font-semibold px-10">
-          <span>{text}</span>
-          <Cursor cursorColor="#F7AB0A" />
+          <span>
+            {"< "}
+            {text}
+            <Cursor cursorColor="#F7AB0A" />
+            {" />"}
+          </span>
         </h1>
         <div className="pt-5">
           <Link href="#about">

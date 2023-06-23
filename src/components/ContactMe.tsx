@@ -13,7 +13,7 @@ export default function ContactMe() {
       </h3>
       <div className="flex flex-col space-y-10 pt-14">
         {/* <h4 className="text-4xl font-semibold text-center">Get In Touch</h4> */}
-        <div className="md:space-y-3 sm:space-y-2 xl:space-y-5">
+        <div className="space-y-2 md:space-y-3 sm:space-y-2 xl:space-y-5">
           <div className="flex items-center space-x-2 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p className="text-2xl md:text-1xl sm:text-xl">+20 1111123353</p>
